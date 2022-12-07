@@ -1,0 +1,207 @@
+:root {
+    --darkest-blue: #002537;
+    --black-blue: #004961;
+    --blue: #007996;
+    --light-blue: #00b7d5;
+    --white-blue: #00ffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+header {
+    width: 100%;
+}
+
+header .social-media {
+    width: 100%;
+    height: 60px;
+    background-color: var(--white-blue);
+}
+
+header .social-media div {
+    padding-top: 15px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+header .social-media div a {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header .social-media div .face {
+    background-image: url('../assets/icons/facebook.png');
+}
+
+header .social-media div .twitter {
+    background-image: url('../assets/icons/twitter.png');
+}
+
+header .social-media div .instagram {
+    background-image: url('../assets/icons/instagram.png');
+}
+
+header .social-media div .linkedin {
+    background-image: url('../assets/icons/linkedin.png');
+}
+
+header .social-media div .youtube {
+    background-image: url('../assets/icons/youtube.png');
+}
+
+header .nav {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.nav .nav__logo-container {
+    min-width: 300px;
+    max-width: 450px;
+    height: 100%;
+}
+
+.nav .nav__logo-container a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-image: url('../assets/img/Logo-negro.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav .nav__aboutMe {
+    font-family: 'Alexandria', sans-serif;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 11px;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #212529;
+}
+
+.nav .nav__aboutMe:hover {
+    background: #fff;
+    color: #212529
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/Cover.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 60%;
+    place-items: center;
+}
+
+.main .title-container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-family: 'Alexandria', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.main .title-container .btn {
+    width: 120px;
+    height: 36px;
+    justify-self: center;
+    font-family: 'Alexandria', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #b9bbb4;
+    overflow: hidden;
+    border: 2px solid #212529;
+    color: #212529;
+}
+
+.main .title-container .btn:hover {
+    color: #fff;
+}
+
+.main .title-container .btn:hover:after {
+    height: 100%;
+}
+
+.main .title-container .btn:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background: #212529;
+}
+
+
+@media (min-width: 426px) {
+    header .nav {
+        height: 60px;
+        margin-top: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
